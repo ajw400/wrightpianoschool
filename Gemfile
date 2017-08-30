@@ -6,7 +6,7 @@ gem 'figaro'
 gem 'jbuilder', '~> 2.0'
 gem 'pg'
 gem 'puma'
-gem 'rails', '5.1.2'
+gem 'rails', '5.0.3'
 gem 'redis'
 
 gem 'autoprefixer-rails'
@@ -16,6 +16,11 @@ gem 'jquery-rails'
 gem 'sass-rails'
 gem 'simple_form'
 gem 'uglifier'
+gem 'cloudinary', '1.1.7'
+gem 'attachinary', github: 'assembler/attachinary'
+gem 'jquery-fileupload-rails'
+gem 'coffee-rails'
+
 
 group :development, :test do
   gem 'pry-byebug'
