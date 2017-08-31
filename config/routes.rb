@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   mount Attachinary::Engine => "/attachinary"
   resources :teachers
+  resources :messages, only: [:create]
   resource :pages, only: [] do
     member do
       get :about
@@ -17,5 +18,6 @@ Rails.application.routes.draw do
   end
   resources :paragraphs, only: [:create, :update, :destroy]
   resources :degrees, only: [:create, :update, :destroy]
+  resources :students, only: [:new, :create, :update, :destroy]
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

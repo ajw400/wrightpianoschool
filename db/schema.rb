@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170831191952) do
+ActiveRecord::Schema.define(version: 20170831230435) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -41,12 +41,47 @@ ActiveRecord::Schema.define(version: 20170831191952) do
     t.index ["teacher_id"], name: "index_degrees_on_teacher_id", using: :btree
   end
 
+  create_table "messages", force: :cascade do |t|
+    t.text     "content"
+    t.integer  "teacher_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "email"
+    t.string   "phone"
+    t.index ["teacher_id"], name: "index_messages_on_teacher_id", using: :btree
+  end
+
   create_table "paragraphs", force: :cascade do |t|
     t.text     "content"
     t.integer  "teacher_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["teacher_id"], name: "index_paragraphs_on_teacher_id", using: :btree
+  end
+
+  create_table "student_children", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "birthdate"
+    t.string   "experience"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "student_id"
+    t.index ["student_id"], name: "index_student_children_on_student_id", using: :btree
+  end
+
+  create_table "students", force: :cascade do |t|
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
+    t.string   "phone"
+    t.string   "address"
+    t.string   "city"
+    t.string   "in_home"
+    t.text     "times"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "languages"
   end
 
   create_table "teachers", id: :bigserial, force: :cascade do |t|
@@ -81,5 +116,7 @@ ActiveRecord::Schema.define(version: 20170831191952) do
   end
 
   add_foreign_key "degrees", "teachers"
+  add_foreign_key "messages", "teachers"
   add_foreign_key "paragraphs", "teachers"
+  add_foreign_key "student_children", "students"
 end

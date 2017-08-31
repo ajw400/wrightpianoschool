@@ -15,6 +15,7 @@ class TeachersController < ApplicationController
 
   def show
     @teacher = Teacher.find(params[:id])
+    @message = Message.new
   end
 
 
