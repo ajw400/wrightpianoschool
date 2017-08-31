@@ -9,8 +9,17 @@ class TeachersController < ApplicationController
     @teacher = Teacher.new
   end
 
+  def edit
+    @teacher = Teacher.find(params[:id])
+  end
+
+  def show
+    @teacher = Teacher.find(params[:id])
+  end
+
+
   def create
-    teacher = Teacher.new(teacher_params)
+    teacher = Teacher.create!(teacher_params)
   end
 
   def update
@@ -21,6 +30,9 @@ class TeachersController < ApplicationController
   private
 
   def teacher_params
-    params.require(:teacher).permit(:photo, :first_name, :last_name, :email, :phone, :address, :bio, :hour_fee, :in_home_fee)
+    params.require(:teacher).permit(:photo, :first_name, :location, :last_name, :languages,
+      :email, :phone, :address, :bio, :hour_fee, :in_home_fee,
+      degrees_attributes: [:id, :description, :school, :year, :notes, :_destroy],
+      paragraphs_attributes: [:id, :content, :_destroy])
   end
 end

@@ -16,6 +16,9 @@ class PagesController < ApplicationController
   def calendar
   end
 
+  def videos
+  end
+
   def download_policy
   send_file(
     "#{Rails.root}/public/policy.pdf",

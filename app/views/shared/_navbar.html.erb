@@ -12,8 +12,9 @@
       <%= link_to "About", about_pages_path, class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Policy and Prices", policy_pages_path, class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Calendar", calendar_pages_path, class: "navbar-wagon-item navbar-wagon-link" %>
-      <%= link_to "Teachers", "#", class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Teachers", teachers_path, class: "navbar-wagon-item navbar-wagon-link" %>
       <%= link_to "Contact", contact_pages_path, class: "navbar-wagon-item navbar-wagon-link" %>
+      <%= link_to "Videos", videos_pages_path, class: "navbar-wagon-item navbar-wagon-link" %>
 
       <!-- Avatar with dropdown menu -->
 
@@ -24,9 +25,12 @@
     <div class="dropdown">
       <i class="fa fa-bars dropdown-toggle" data-toggle="dropdown"></i>
       <ul class="dropdown-menu dropdown-menu-right navbar-wagon-dropdown-menu">
-        <li><a href="#">Some mobile link</a></li>
-        <li><a href="#">Other one</a></li>
-        <li><a href="#">Other one</a></li>
+      <li><%= link_to "About", about_pages_path, class: "navbar-wagon-item navbar-wagon-link" %></li>
+      <li><%= link_to "Policy and Prices", policy_pages_path, class: "navbar-wagon-item navbar-wagon-link" %></li>
+      <li><%= link_to "Calendar", calendar_pages_path, class: "navbar-wagon-item navbar-wagon-link" %></li>
+      <li><%= link_to "Teachers", teachers_path, class: "navbar-wagon-item navbar-wagon-link" %></li>
+      <li><%= link_to "Contact", contact_pages_path, class: "navbar-wagon-item navbar-wagon-link" %></li>
+      <li><%= link_to "Videos", videos_pages_path, class: "navbar-wagon-item navbar-wagon-link" %></li>
       </ul>
     </div>
   </div>

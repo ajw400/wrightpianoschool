@@ -1,1 +1,29 @@
-_teachers_form.html.erb
+<%= simple_form_for @teacher do |f| %>
+<%= f.input :first_name %>
+<%= f.input :last_name %>
+<%= f.input :phone %>
+<%= f.input :email %>
+<%= f.input :languages %>
+<%= f.input :location %>
+<%= f.input :photo, as: :attachinary %>
+<h3>Bio Paragraphs</h3>
+<div id="paragraphs">
+  <%= f.simple_fields_for :paragraphs do |paragraph| %>
+    <%= render 'paragraph_fields', f: paragraph %>
+  <% end %>
+  <div class="links">
+    <%= link_to_add_association 'add paragraph', f, :paragraphs %>
+  </div>
+</div>
+
+<h3>Degrees</h3>
+<div id="degrees">
+  <%= f.simple_fields_for :degrees do |degree| %>
+    <%= render 'degree_fields', f: degree %>
+  <% end %>
+  <div class="links">
+    <%= link_to_add_association 'add degree', f, :degrees %>
+  </div>
+</div>
+<%= f.submit %>
+<% end %>

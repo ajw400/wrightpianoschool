@@ -1,1 +1,16 @@
-show.html.erb
+<div class="container">
+  <% if @teacher.photo? %>
+    <%= cl_image_tag @teacher.photo.path, width: 300, height: 400, crop: :fill, gravity: :face %>
+  <% end %>
+  <h1><%= "#{@teacher.first_name} #{@teacher.last_name}" %></h1>
+  <ul>
+  <% @teacher.degrees.each do |degree| %>
+    <li><%= "#{degree.description} - #{degree.school}, #{degree.year} - #{degree.notes}" %></li>
+  <% end %>
+  </ul>
+  <p>Languages: <%= @teacher.languages %></p>
+  <h3>Biography</h3>
+  <% @teacher.paragraphs.each do |paragraph| %>
+    <p><%= paragraph.content %></p>
+  <% end %>
+</div>
