@@ -32,7 +32,12 @@
         <h4 class="modal-title">Send <%= @teacher.first_name %> a message!</h4>
       </div>
       <div class="modal-body">
-        <p>Please also feel free to call <%= @teacher.first_name %> at <%= @teacher.phone %>.</p>
+        <p>Please also feel free to call <%= @teacher.first_name %> at
+        <% if @teacher.phone != "" %>
+          <%= @teacher.phone %>
+        <% else %>
+          +31639591941
+        <% end %>.</p>
         <%= simple_form_for @message do |f| %>
           <%= f.input :email, required: true, placeholder: "Your email address", label: false %>
           <%= f.input :phone, placeholder: "Your phone number (optional)", label: false %>
