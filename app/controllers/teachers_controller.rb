@@ -2,7 +2,7 @@ class TeachersController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
 
   def index
-    @teachers = Teacher.all
+    @teachers = Teacher.order(:rank)
   end
 
   def new
