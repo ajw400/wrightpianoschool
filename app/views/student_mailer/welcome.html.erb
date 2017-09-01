@@ -1,0 +1,24 @@
+<p>Hi <%= @student.first_name %>,</p>
+<br>
+<p>Thanks for submitting the application form. We will contact you soon about scheduling a trial lesson!</p>
+<br>
+<p>Andrew Wright</p>
+<p>0639591941</p>
+<br>
+<!-- <p>Your information</p>
+<p><%= "#{@student.first_name} #{@student.last_name}" %></p>
+<p><%= "#{@student.address} #{@student.city} #{@student.zip_code}" %></p>
+<p><%= "#{@student.times}" %></p>
+<p><%=  %></p> -->
+
+<% for attribute in @student.attributes.keys %>
+  <p><%= attribute.humanize %> <%= @student.attributes[attribute].to_s %></p>
+<% end %>
+
+<% if @student.student_children.first %>
+  <% @student.student_children.each do |child| %>
+    <% for attribute in child.attributes.keys %>
+      <p><%= attribute.humanize %> <%= child.attributes[attribute].to_s %></p>
+    <% end %>
+  <% end %>
+<% end %>

@@ -1,10 +1,12 @@
+<p>Please fill in this application form to schedule a trial lesson.</p>
 <%= simple_form_for @student do |f| %>
 <%= f.input :first_name %>
 <%= f.input :last_name %>
 <%= f.input :phone %>
 <%= f.input :email %>
 <%= f.input :languages %>
-<%= f.input :in_home %>
+<%= f.input :in_home, label: "Please indicate whether you would like lessons at your home, or at the teacher's location" %>
+<%= f.input :times, label: "Times available (list as many as possible)" %>
 <h3>Add children (optional)</h3>
 <div id="student_children">
   <%= f.simple_fields_for :student_children do |student_child| %>
@@ -14,5 +16,7 @@
     <%= link_to_add_association 'add child', f, :student_children %>
   </div>
 </div>
-<%= f.submit %>
+<br>
+<%= f.input :notes %>
+<%= f.button :submit, "Send Application", class: "btn btn-primary" %>
 <% end %>

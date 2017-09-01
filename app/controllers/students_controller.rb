@@ -6,8 +6,19 @@ class StudentsController < ApplicationController
   end
 
   def create
+    Student.create!(student_params)
+    flash[:notice] = "Application submitted!"
+    redirect_to root_path
   end
 
   def destroy
+  end
+
+  private
+
+  def student_params
+    params.require(:student).permit(:first_name, :notes, :last_name, :email, :address,
+      :city, :languages, :zip_code, :phone, :times, :in_home,
+      student_children_attributes: [:id, :first_name, :last_name, :birthdate, :experience, :_destroy])
   end
 end
