@@ -20,12 +20,22 @@ class TeachersController < ApplicationController
 
 
   def create
-    teacher = Teacher.create!(teacher_params)
+    if current_user.email == "prestoassai@hotmail.com"
+      teacher = Teacher.create!(teacher_params)
+    else
+      flash[:alert] = "you do not have authorization to create a teacher!"
+    end
+    redirect_to teachers_path
   end
 
   def update
     teacher = Teacher.find(params[:id])
-    teacher.update(teacher_params)
+    if current_user.email == teacher.email
+      teacher.update(teacher_params)
+    else
+      flash[:alert] = "you do not have authorization to update this teacher!"
+    end
+    redirect_to teachers_path
   end
 
   private

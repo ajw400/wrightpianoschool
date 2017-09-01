@@ -20,7 +20,11 @@
   <% @teacher.paragraphs.each do |paragraph| %>
     <p><%= paragraph.content %></p>
   <% end %>
-
+<% if current_user %>
+<% if current_user.email == @teacher.email %>
+<%= link_to "Edit Teacher Information", edit_teacher_path(@teacher), class: "btn btn-danger btn-lg" %>
+<% end %>
+<% end %>
 
   <div id="contact" class="modal fade" role="dialog">
   <div class="modal-dialog">

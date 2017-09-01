@@ -5,6 +5,9 @@
 <%= f.input :email %>
 <%= f.input :languages %>
 <%= f.input :location %>
+<% if current_user.email == "prestoassai@hotmail.com" %>
+  <%= f.input :rank %>
+<% end %>
 <%= f.input :photo, as: :attachinary %>
 <h3>Bio Paragraphs</h3>
 <div id="paragraphs">
