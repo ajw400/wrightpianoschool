@@ -10,15 +10,18 @@
 <p><%= "#{@student.address} #{@student.city} #{@student.zip_code}" %></p>
 <p><%= "#{@student.times}" %></p>
 <p><%=  %></p> -->
-
+<br>
+<br>
+<br>
+<h3>Information</h3>
 <% for attribute in @student.attributes.keys %>
-  <p><%= attribute.humanize %> <%= @student.attributes[attribute].to_s %></p>
+  <p><%= attribute.humanize %>: <%= @student.attributes[attribute].to_s %></p>
 <% end %>
 
 <% if @student.student_children.first %>
   <% @student.student_children.each do |child| %>
     <% for attribute in child.attributes.keys %>
-      <p><%= attribute.humanize %> <%= child.attributes[attribute].to_s %></p>
+      <p><%= attribute.humanize %>: <%= child.attributes[attribute].to_s %></p>
     <% end %>
   <% end %>
 <% end %>
