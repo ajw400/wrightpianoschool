@@ -116,6 +116,7 @@ GEM
     minitest (5.10.3)
     multi_json (1.12.1)
     netrc (0.11.0)
+    newrelic_rpm (4.4.0.336)
     nio4r (2.1.0)
     nokogiri (1.8.0)
       mini_portile2 (~> 2.2.0)
@@ -234,6 +235,7 @@ DEPENDENCIES
   jquery-fileupload-rails
   jquery-rails
   listen (~> 3.0.5)
+  newrelic_rpm
   pg
   pry-byebug
   pry-rails
