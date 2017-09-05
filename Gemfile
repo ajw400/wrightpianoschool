@@ -10,6 +10,8 @@ gem 'rails', '5.0.3'
 gem 'redis'
 gem 'cocoon'
 gem 'newrelic_rpm'
+gem 'postmark-rails'
+
 
 
 gem 'autoprefixer-rails'
