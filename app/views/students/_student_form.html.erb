@@ -20,5 +20,6 @@
 </div>
 <br>
 <%= f.input :notes, label: false, placeholder: "Notes" %>
+<%= f.input :referral, label: "How did you hear about us?", collection: ["Google search", "Word-of-mouth referral", "Poster / flyer", "Competition, masterclass, or other activity", "Other"] %>
 <%= f.button :submit, "Send Application", class: "btn btn-primary" %>
 <% end %>
