@@ -16,14 +16,19 @@
 <br>
 <br>
 <h3>Information</h3>
-<% for attribute in @student.attributes.keys %>
-  <p><%= attribute.humanize %>: <%= @student.attributes[attribute].to_s %></p>
-<% end %>
-
+<p>Parent name: <%= "#{@student.first_name} #{@student.last_name}" %></p>
+<p>Address: <%= "#{@student.address} #{@student.zip_code}" %></p>
+<p>Email: <%= "#{@student.email}" %> Phone: <%= @student.phone %></p>
+<p>Location preference: <%= @student.in_home %></p>
+<p>Language of instruction: <%= @student.languages %></p>
+<p>Time preferences: <%= @student.times %></p>
+<p>Notes: <%= @student.notes %></p>
+<p>Referral: <%= @student.referral %></p>
 <% if @student.student_children.first %>
+  <h4>Students</h4>
   <% @student.student_children.each do |child| %>
-    <% for attribute in child.attributes.keys %>
-      <p><%= attribute.humanize %>: <%= child.attributes[attribute].to_s %></p>
-    <% end %>
+    <p>Name: <%= "#{child.first_name} #{child.last_name}" %></p>
+    <p>Birthdate: <%= child.birthdate %></p>
+    <p>Experience: <%= child.experience %></p>
   <% end %>
 <% end %>
