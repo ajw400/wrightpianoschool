@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170901221718) do
+ActiveRecord::Schema.define(version: 20170930120533) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -84,6 +84,7 @@ ActiveRecord::Schema.define(version: 20170901221718) do
     t.string   "languages"
     t.string   "zip_code"
     t.text     "notes"
+    t.string   "referral"
   end
 
   create_table "teachers", id: :bigserial, force: :cascade do |t|
