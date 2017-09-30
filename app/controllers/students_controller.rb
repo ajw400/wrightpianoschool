@@ -6,8 +6,9 @@ class StudentsController < ApplicationController
   end
 
   def create
-    Student.create!(student_params)
+    @student = Student.create!(student_params)
     flash[:notice] = "Application submitted!"
+    StudentMailer.welcome(@student).deliver_now
     redirect_to root_path
   end
 
