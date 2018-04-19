@@ -2,7 +2,9 @@ class MessagesController < ApplicationController
   skip_before_action :authenticate_user!
 
   def create
-    Message.create!(message_params)
+    msg = Message.create!(message_params)
+    p msg
+    StudentMailer.message(msg).deliver_now
     flash[:notice] = "Message Sent!"
     redirect_to teacher_path(Teacher.find(message_params[:teacher_id]))
   end
