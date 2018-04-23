@@ -7,12 +7,11 @@ class StudentMailer < ApplicationMailer
   #
   def contact(message)
     @message = message
-    mail(to: "info@wrightpianoschool.com", subject: "New message!")
+    mail(to: "info@wrightpianoschool.com", subject: "New message!", from: 'info@wrightpianoschool.com')
   end
 
   def welcome(student)
     @student = student
-
     mail(to: "#{@student.email}, info@wrightpianoschool.com", subject: 'Welcome to Wright Piano School!', from: 'info@wrightpianoschool.com')
   end
 end
