@@ -4,7 +4,7 @@ class MessagesController < ApplicationController
   def create
     msg = Message.create!(message_params)
     p msg
-    StudentMailer.message(msg).deliver_now
+    StudentMailer.contact(msg).deliver_now
     flash[:notice] = "Message Sent!"
     redirect_to teacher_path(Teacher.find(message_params[:teacher_id]))
   end

@@ -5,8 +5,8 @@ class StudentMailer < ApplicationMailer
   #
   #   en.student_mailer.welcome.subject
   #
-  def message(msg)
-    @message = msg
+  def contact(message)
+    @message = message
     mail(to: "info@wrightpianoschool.com", subject: "New message!")
   end
 
