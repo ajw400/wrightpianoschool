@@ -38,9 +38,10 @@
       <div class="modal-body">
         <p>Please also feel free to call us at 0639591941</p>
         <%= simple_form_for @message do |f| %>
+          <%= f.input :name, required: true, placeholder: "Your name", label: false%>
           <%= f.input :email, required: true, placeholder: "Your email address", label: false %>
           <%= f.input :phone, placeholder: "Your phone number (optional)", label: false %>
-          <%= f.input :content, label: "Message", input_html: { rows: 7 }%>
+          <%= f.input :content, required: true, label: "Message", input_html: { rows: 7 }%>
           <%= f.hidden_field :teacher_id, value: @teacher.id %>
         </div>
         <div class="modal-footer">

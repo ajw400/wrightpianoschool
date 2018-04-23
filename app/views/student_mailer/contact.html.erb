@@ -1,2 +1,7 @@
-message.html.erb
-test
+Message for <%= "#{@message.teacher.first_name} #{@message.teacher.last_name}" %>
+<br>
+From <br>
+<%= @message.name %> <br>
+<%= @message.email %> <br>
+<%= @message.phone %> <br>
+<%= @message.content %>
