@@ -1,5 +1,5 @@
 Rails.application.configure do
-  config.action_mailer.default_url_options = { host: "wrightpianoschool.com" }
+  config.action_mailer.default_url_options = { host: "www.wrightpianoschool.com" }
   config.action_mailer.delivery_method     = :postmark
   config.action_mailer.postmark_settings   = { api_key: ENV['POSTMARK_API_KEY'] }
   # Settings specified here will take precedence over those in config/application.rb.

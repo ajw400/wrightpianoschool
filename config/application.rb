@@ -23,6 +23,9 @@ module Wrightpianoschool
       generate.assets false
       generate.helper false
     end
+    config.action_mailer.delivery_method = :postmark
+    config.action_mailer.postmark_settings = { :api_token => ENV['POSTMARK_API_KEY'] }
+    config.action_mailer.default_url_options = { host: "www.wrightpianoschool.com" }
 
     # Initialize configuration defaults for originally generated Rails version.
     # config.load_defaults 5.1
