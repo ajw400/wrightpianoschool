@@ -1,11 +1,11 @@
 <p>Fill in this application for a free trial lesson!</p>
 <%= simple_form_for @student do |f| %>
-<%= f.input :first_name, label: false, placeholder: "Parent First Name"%>
-<%= f.input :last_name, label: false, placeholder: "Parent Last Name" %>
+<%= f.input :first_name, required: true, label: false, placeholder: "Parent First Name"%>
+<%= f.input :last_name, required: true, label: false, placeholder: "Parent Last Name" %>
 <%= f.input :phone, label: false, placeholder: "Phone Number" %>
-<%= f.input :email, label: false, placeholder: "Email" %>
-<%= f.input :address, label: false, placeholder: "Address" %>
-<%= f.input :zip_code, label: false, placeholder: "Zip code" %>
+<%= f.input :email, required: true, label: false, placeholder: "Email" %>
+<%= f.input :address, required: true, label: false, placeholder: "Address" %>
+<%= f.input :zip_code, required: true, label: false, placeholder: "Zip code" %>
 <%= f.input :languages, label: false, placeholder: "Preferred language of instruction (English, Dutch, German etc.)" %>
 <%= f.input :in_home, label: false, placeholder: "Please indicate whether you would like lessons at your home, or at the teacher's location" %>
 <%= f.input :times, label: false, placeholder: "Times available (list as many as possible)" %>
