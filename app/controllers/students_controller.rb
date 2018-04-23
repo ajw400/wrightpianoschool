@@ -6,9 +6,14 @@ class StudentsController < ApplicationController
   end
 
   def create
-    @student = Student.create!(student_params)
-    flash[:notice] = "Application submitted!"
-    StudentMailer.welcome(@student).deliver_now
+    @student = Student.create(student_params)
+    if @student
+      flash[:notice] = "Application submitted!"
+      p @student
+      StudentMailer.welcome(@student).deliver_now
+    else
+      flash[:alert] = "Something went wrong! Please contact us at info@wrightpianoschool.com"
+    end
     redirect_to root_path
   end
 
