@@ -1,5 +1,15 @@
-<div class="container">
-  <h1>Calendar</h1>
-  <p>Please note that the calendar below is a standard calendar for the school. Individual teachers might deviate from the calendar, and will communicate this directly to their students, while still offering the correct number of teaching weeks. Refer to the Studio Policy for information about cancellations / rescheduling lessons. </p>
-  <p><%= link_to "Wright Piano School Calendar - 2017-2018", download_calendar_pages_path, "data-turbolinks": false %></p>
+<%= render 'shared/navbar' %>
+<%= render 'shared/flashes' %>
+<div class="main-container">
+   <section>
+      <div class="container">
+         <div class="row justify-content-center text-center section-intro">
+            <div class="col-12 col-md-9 col-lg-8">
+               <h1>Calendar</h1>
+               <p>Please note that the calendar below is a standard calendar for the school. Individual teachers might deviate from the calendar, and will communicate this directly to their students, while still offering the correct number of teaching weeks. Refer to the Studio Policy for information about cancellations / rescheduling lessons. </p>
+               <p><%= link_to "Wright Piano School Calendar - 2017-2018", download_calendar_pages_path, "data-turbolinks": false %></p>
+            </div>
+         </div>
+      </div>
+   </section>
 </div>

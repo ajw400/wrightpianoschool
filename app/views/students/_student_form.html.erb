@@ -1,25 +1,74 @@
-<p>Fill in this application for a free trial lesson!</p>
-<%= simple_form_for @student do |f| %>
-<%= f.input :first_name, required: true, label: false, placeholder: "Parent First Name"%>
-<%= f.input :last_name, required: true, label: false, placeholder: "Parent Last Name" %>
-<%= f.input :phone, label: false, placeholder: "Phone Number" %>
-<%= f.input :email, required: true, label: false, placeholder: "Email" %>
-<%= f.input :address, required: true, label: false, placeholder: "Address" %>
-<%= f.input :zip_code, required: true, label: false, placeholder: "Zip code" %>
-<%= f.input :languages, label: false, placeholder: "Preferred language of instruction (English, Dutch, German etc.)" %>
-<%= f.input :in_home, label: false, placeholder: "Please indicate whether you would like lessons at your home, or at the teacher's location" %>
-<%= f.input :times, label: false, placeholder: "Times available (list as many as possible)" %>
-<h3>Add student</h3>
-<div id="student_children">
-  <%= f.simple_fields_for :student_children do |student_child| %>
-    <%= render 'student_child_fields', f: student_child %>
-  <% end %>
-  <div class="links">
-    <%= link_to_add_association 'add child', f, :student_children %>
-  </div>
-</div>
-<br>
-<%= f.input :notes, label: false, placeholder: "Notes" %>
-<%= f.input :referral, label: "How did you hear about us?", collection: ["Google search", "Word-of-mouth referral", "Poster / flyer", "Competition, masterclass, or other activity", "Other"] %>
-<%= f.button :submit, "Send Application", class: "btn btn-primary" %>
-<% end %>
+<section>
+   <div class="container">
+      <div class="row justify-content-center text-center section-intro">
+         <div class="col-12 col-md-9 col-lg-8">
+            <p>Fill in this application for a free trial lesson!</p>
+            <%= simple_form_for @student do |f| %>
+            <div class="row">
+               <div class="col-6">
+                  <div class="form-group">
+                     <%= f.input :first_name, class: "form-control form-control-lg", required: true, label: false, placeholder: "Parent First Name" %>
+                  </div>
+               </div>
+               <div class="col-6">
+                  <div class="form-group">
+                     <%= f.input :last_name, required: true, label: false, placeholder: "Parent Last Name" %>
+                  </div>
+               </div>
+               <div class="col-6">
+                  <div class="form-group">
+                     <%= f.input :phone, label: false, placeholder: "Phone Number" %>
+                  </div>
+               </div>
+               <div class="col-6">
+                  <div class="form-group">
+                     <%= f.input :email, required: true, label: false, placeholder: "Email" %>
+                  </div>
+               </div>
+               <div class="col-6">
+                  <div class="form-group">
+                     <%= f.input :address, required: true, label: false, placeholder: "Address" %>
+                  </div>
+               </div>
+               <div class="col-6">
+                  <div class="form-group">
+                     <%= f.input :zip_code, required: true, label: false, placeholder: "Zip code" %>
+                  </div>
+               </div>
+               <div class="col-12">
+                  <div class="form-group">
+                     <%= f.input :languages, label: false, placeholder: "Preferred language of instruction (English, Dutch, German etc.)" %>
+                  </div>
+               </div>
+               <div class="col-12">
+                  <%= f.input :in_home, label: false, placeholder: "Please indicate whether you would like lessons at your home, or at the teacher's location" %>
+               </div>
+               <div class="col-12">
+                  <%= f.input :times, label: false, placeholder: "Times available (list as many as possible)" %>
+               </div>
+               <div class="col-12">
+                  <div id="student_children">
+                     <%= f.simple_fields_for :student_children do |student_child| %>
+                     <%= render 'student_child_fields', f: student_child %>
+                     <% end %>
+                     <div class="links">
+                        <%= link_to_add_association 'Add Child', f, :student_children, class: "btn btn btn-primary" %>
+                     </div>
+                  </div>
+                  <br>
+               </div>
+               <div class="col-12">
+                  <%= f.input :notes, label: false, placeholder: "Notes" %>
+               </div>
+               <div class="col-12">
+                  <%= f.input :referral, label: "How did you hear about us?", collection: ["Google search", "Word-of-mouth referral", "Poster / flyer", "Competition, masterclass, or other activity", "Other"] %>
+               </div>
+               <div class="col-12">
+                  <%= f.button :submit, "Send Application", class: "btn btn-success" %>
+               </div>
+            </div>
+            <% end %>
+         </div>
+      </div>
+   </div>
+</section>

@@ -7,3 +7,6 @@
 //= require attachinary
 //= require cocoon
 //= require_tree .
+
+//= require components/bootstrap.min
+//= require components/theme.min
