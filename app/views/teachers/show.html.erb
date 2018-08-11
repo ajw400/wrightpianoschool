@@ -1,61 +1,73 @@
-<div class="container">
-<div class="text-center">
-  <% if @teacher.photo? %>
-    <div class="teacher-pic">
-    <%= cl_image_tag @teacher.photo.path, width: 250, height: 350, crop: :fill, gravity: :face %></div>
-  <% end %>
-  <div class="row">
-<button type="button" class="btn btn-info" data-toggle="modal" data-target="#contact">Contact</button>
-<span class="btn btn-primary">Sign up for a trial lesson!</span></div>
-</div>
-  <h1><%= "#{@teacher.first_name} #{@teacher.last_name}" %></h1>
-  <ul>
-  <% @teacher.degrees.each do |degree| %>
-    <li><%= "#{degree.description} - #{degree.school}, #{degree.year} - #{degree.notes}" %></li>
-  <% end %>
-  </ul>
-  <p>Languages: <%= @teacher.languages %></p>
-  <p>Location/region: <%= @teacher.location %></p>
-  <h3>Biography</h3>
-  <% @teacher.paragraphs.each do |paragraph| %>
-    <p><%= paragraph.content %></p>
-  <% end %>
-<% if current_user %>
-<% if current_user.email == @teacher.email %>
-<%= link_to "Edit Teacher Information", edit_teacher_path(@teacher), class: "btn btn-danger btn-lg" %>
-<% end %>
-<% end %>
-
-  <div id="contact" class="modal fade" role="dialog">
-  <div class="modal-dialog">
-
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title">Send <%= @teacher.first_name %> a message!</h4>
-      </div>
-      <div class="modal-body">
-        <p>Please also feel free to call us at 0639591941</p>
-        <%= simple_form_for @message do |f| %>
-          <%= f.input :name, required: true, placeholder: "Your name", label: false%>
-          <%= f.input :email, required: true, placeholder: "Your email address", label: false %>
-          <%= f.input :phone, placeholder: "Your phone number (optional)", label: false %>
-          <%= f.input :content, required: true, label: "Message", input_html: { rows: 7 }%>
-          <%= f.hidden_field :teacher_id, value: @teacher.id %>
-        </div>
-        <div class="modal-footer">
-        <%= button_tag(type: 'submit', class: "btn btn-primary") do %>Send Message <% end %>
+<%= render 'shared/navbar' %>
+<%= render 'shared/flashes' %>
+<div class="main-container">
+  <section>
+    <div class="container">
+      <div class="row justify-content-center text-center section-intro">
+        <div class="col-12 col-md-9 col-lg-8">
+          <div class="text-center">
+            <% if @teacher.photo? %>
+              <div class="teacher-pic">
+                <%= cl_image_tag @teacher.photo.path, width: 250, height: 350, crop: :fill, gravity: :face %></div>
+            <% end %>
+            <div class="row">
+              <button type="button" class="btn btn-lg btn-success" data-toggle="modal" data-target="#contact">Contact</button>
+              <span class="btn btn-lg btn-link text-white">Sign up for a trial lesson!</span></div>
+          </div>
+          <h1><%= "#{@teacher.first_name} #{@teacher.last_name}" %></h1>
+          <ul>
+            <% @teacher.degrees.each do |degree| %>
+              <li><%= "#{degree.description} - #{degree.school}, #{degree.year} - #{degree.notes}" %></li>
+            <% end %>
+          </ul>
+          <p>Languages:
+            <%= @teacher.languages %></p>
+          <p>Location/region:
+            <%= @teacher.location %></p>
+          <h3>Biography</h3>
+          <% @teacher.paragraphs.each do |paragraph| %>
+            <p><%= paragraph.content %></p>
           <% end %>
+          <% if current_user %>
+            <% if current_user.email == @teacher.email %>
+              <%= link_to "Edit Teacher Information", edit_teacher_path(@teacher), class: "btn btn-danger btn-lg" %>
+            <% end %>
+          <% end %>
+
+          <div id="contact" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+
+              <!-- Modal content-->
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  <h4 class="modal-title">Send
+                    <%= @teacher.first_name %>
+                    a message!</h4>
+                </div>
+                <div class="modal-body">
+                  <p>Please also feel free to call us at 0639591941</p>
+                  <%= simple_form_for @message do |f| %>
+                  <%= f.input :name, required: true, placeholder: "Your name", label: false%>
+                  <%= f.input :email, required: true, placeholder: "Your email address", label: false %>
+                  <%= f.input :phone, placeholder: "Your phone number (optional)", label: false %>
+                  <%= f.input :content, required: true, label: "Message", input_html: { rows: 7 }%>
+                  <%= f.hidden_field :teacher_id, value: @teacher.id %>
+                </div>
+                <div class="modal-footer">
+                  <%= button_tag(type: 'submit', class: "btn btn-primary") do %>Send Message
+                <% end %>
+              <% end %>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
-
   </div>
 </div>
+</section>
 </div>
-
 <%= content_for (:after_js) do %>
-<script>
-
-</script>
+<script></script>
 <% end %>
