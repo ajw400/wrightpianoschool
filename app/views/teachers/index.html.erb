@@ -17,11 +17,18 @@
       <div class="row no-gutters justify-content-center">
         <div class="col-12 col-lg-10">
           <ul class="feature-list row">
+            <% @teachers.each do |teacher| %>
+              <%= link_to teacher_path(teacher) do %>
+
             <li class="col-6 col-lg-4">
-              <%= image_tag "1.jpg", class: "img-fluid rounded mb-3" %>
-              <h5 class="mb-0">Andrew Wright</h5>
-              <span>The Hague</span>
+              <% if teacher.photo? %>
+                <%= cl_image_tagnteacher.photo.path, height: 300, width: 400, crop: :fill, gravity: :face, height:300, width: 400, crop: :fill, gravity: :face, class: "img-fluid rounded mb-3" %>
+              <% end %>
+              <h5 class="mb-0"><%= "#{teacher.first_name} #{teacher.last_name}" %></h5>
+              <span><%= teacher.location %></span>
             </li>
+            <% end %>
+            <% end %>
           </ul>
           <!--end of row-->
         </div>
@@ -33,3 +40,5 @@
   </section>
   <!--end of section-->
 </div>
+
+
