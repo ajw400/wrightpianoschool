@@ -22,7 +22,6 @@
       <%= action_cable_meta_tag %>
       <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,400i,500" rel="stylesheet">
       <%= stylesheet_link_tag 'application', media: 'all' %>
-      <%= javascript_include_tag 'application', defer: true %>
    </head>
    <body>
       <!-- Google Tag Manager (noscript) -->
@@ -30,6 +29,8 @@
          height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <!-- End Google Tag Manager (noscript) -->
       <%= yield %>
-      <%= cloudinary_js_config %>
+            <%= javascript_include_tag 'application', 'data-turbolinks-eval': false %>
+
+          <%= cloudinary_js_config %>
    </body>
 </html>

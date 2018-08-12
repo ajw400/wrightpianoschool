@@ -12,9 +12,7 @@ gem 'cocoon'
 gem 'newrelic_rpm'
 gem 'postmark-rails'
 gem 'turbolinks', '~> 5.1.0'
-
-
-
+gem 'popper_js', '~> 1.14.3'
 gem 'autoprefixer-rails'
 gem 'bootstrap-sass'
 gem 'font-awesome-sass'
