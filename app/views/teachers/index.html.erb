@@ -22,7 +22,7 @@
 
             <li class="col-6 col-lg-4">
               <% if teacher.photo? %>
-                <%= cl_image_tagnteacher.photo.path, height: 300, width: 400, crop: :fill, gravity: :face, height:300, width: 400, crop: :fill, gravity: :face, class: "img-fluid rounded mb-3" %>
+                <%= cl_image_tag teacher.photo.path, height: 300, width: 400, crop: :fill, gravity: :face, height:300, width: 400, crop: :fill, gravity: :face, class: "img-fluid rounded mb-3" %>
               <% end %>
               <h5 class="mb-0"><%= "#{teacher.first_name} #{teacher.last_name}" %></h5>
               <span><%= teacher.location %></span>
