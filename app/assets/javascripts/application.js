@@ -10,3 +10,5 @@
 
 //= require components/bootstrap.min
 //= require components/theme.min
+$('.dropdown-toggle').dropdown();
+
