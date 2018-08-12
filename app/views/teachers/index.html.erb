@@ -20,7 +20,7 @@
                   <% @teachers.each do |teacher| %>
                   <li class="col-6 col-lg-4">
                      <%= link_to teacher_path(teacher) do %>
-                     <% if teacher.photo? %>, <%= image_tag cl_image_path teacher.photo.path, class: "img-fluid rounded mb-3", gravity: :face %>')<% end %>">
+                     <% if teacher.photo? %>, url('<%= cl_image_path teacher.photo.path, class: "img-fluid rounded mb-3", gravity: :face %>')<% end %>">
                      <% end %>
                      <h5 class="mb-0"><%= "#{teacher.first_name} #{teacher.last_name}" %></h5>
                      <span><%= teacher.location %></span>
