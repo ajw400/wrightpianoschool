@@ -18,9 +18,10 @@
             <%= link_to teacher_path(teacher) do %>
             <div class="card">
                <% if teacher.photo? %>
-                <%= cl_image_tag teacher.photo.path, height: 297, width: 297, crop: :fill, gravity: :face, class: "img-fluid rounded mb-3 card-img" %>
+                <%= cl_image_tag teacher.photo.path, height: 297, width: 297, crop: :fill, gravity: :face, class: "img-fluid rounded card-img" %>
+
                <% else %>
-               <%= image_tag "placeholder.png", class: "image-fluid rounded mb-3 card-img" %>
+               <%= image_tag "placeholder.png", class: "image-fluid rounded card-img" %>
                <% end %>
                <div class="card-footer">
                   <h5 class="mb-0"><%= "#{teacher.first_name} #{teacher.last_name}" %></h5>
