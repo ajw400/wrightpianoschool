@@ -17,15 +17,15 @@
             <% @teachers.each do |teacher| %>
             <%= link_to teacher_path(teacher) do %>
             <div class="card">
-                  <div class="card-header">
-                  <h5 class="mb-0"><%= "#{teacher.first_name} #{teacher.last_name}" %></h5>
-                  <span><%= teacher.location %></span>
-               </div>
                <% if teacher.photo? %>
                 <%= cl_image_tag teacher.photo.path, height: 297, width: 297, crop: :fill, gravity: :face, class: "img-fluid rounded mb-3 card-img" %>
                <% else %>
                <%= image_tag "placeholder.png", class: "image-fluid rounded mb-3 card-img" %>
                <% end %>
+               <div class="card-footer">
+                  <h5 class="mb-0"><%= "#{teacher.first_name} #{teacher.last_name}" %></h5>
+                  <span><%= teacher.location %></span>
+               </div>
             </div>
             <% end %>
             <% end %>
