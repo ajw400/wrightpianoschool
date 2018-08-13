@@ -1,43 +1,38 @@
 <%= render 'shared/navbar' %>
 <%= render 'shared/flashes' %>
 <div class="main-container">
-  <section class="">
-    <div class="container">
-      <div class="row justify-content-center text-center section-intro">
-        <div class="col-12 col-md-9 col-lg-8">
-          <h1>Teachers</h1>
-          <p>Please click on a teacher to display their full information!</p>
-        </div>
+   <section class="">
+      <div class="container">
+         <div class="row justify-content-center text-center section-intro">
+            <div class="col-12 col-md-9 col-lg-8">
+               <h1>Teachers</h1>
+               <p>Please click on a teacher to display their full information!</p>
+            </div>
+         </div>
       </div>
-    </div>
-  </section>
-  <section class="flush-with-above">
-    <div class="container">
-      <!--end of row-->
-
-        <div class="card-columns">
+   </section>
+   <section class="flush-with-above">
+      <div class="container">
+         <div class="card-columns">
             <% @teachers.each do |teacher| %>
-            <%= link_to teacher_path(teacher) do %>
-              <div class="card">
-              <% if teacher.photo? %>
-              <%= cl_image_tag teacher.photo.path, height: 480, width: 480, crop: :fill, gravity: :face, class: "img-fluid rounded mb-3 card-img" %>
-              <% else %>
-                <%= image_tag "placeholder.png", class: "image-fluid rounded mb-3 card-img" %>
-              <% end %>
-              <div class="card-footer">
-              <h5 class="mb-0"><%= "#{teacher.first_name} #{teacher.last_name}" %></h5>
-              <span><%= teacher.location %></span>
-            </div></div>
+            <div class="card">
+               <% if teacher.photo? %>
+               <%= cl_image_tag teacher.photo.path, class: "img-fluid rounded mb-3 card-img" %>
+               <% else %>
+               <%= image_tag "placeholder.png", class: "image-fluid rounded mb-3 card-img" %>
+               <% end %>
+               <div class="card-footer">
+                  <h5 class="mb-0"><%= "#{teacher.first_name} #{teacher.last_name}" %></h5>
+                  <span><%= teacher.location %></span>
+                  <%= link_to "Learn More", teacher_path(teacher), class: "btn btn-lg btn-link text-success" %>
+               </div>
+            </div>
             <% end %>
-            <% end %>
-          <!--end of row-->
-        <!--end of col-->
+            <!--end of col-->
+         </div>
+         <!--end of row-->
       </div>
-      <!--end of row-->
-    </div>
-    <!--end of container-->
-  </section>
-  <!--end of section-->
+      <!--end of container-->
+   </section>
+   <!--end of section-->
 </div>
-
-
