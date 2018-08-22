@@ -21,16 +21,16 @@ class PagesController < ApplicationController
 
   def download_policy
   send_file(
-    "#{Rails.root}/public/policy.pdf",
-    filename: "Wright Piano School - Studio Policy 2017-2018.pdf",
+    "#{Rails.root}/public/policy20182019.pdf",
+    filename: "Wright Piano School Studio Policy 2018-2019.pdf",
     type: "application/pdf"
     )
   end
 
   def download_calendar
   send_file(
-    "#{Rails.root}/public/calendar.pdf",
-    filename: "Wright Piano School - Calendar 2017-2018.pdf",
+    "#{Rails.root}/public/calendar20182019.pdf",
+    filename: "Wright Piano School Teaching Calendar 2018-2019.pdf",
     type: "application/pdf"
     )
   end
