@@ -53,6 +53,14 @@
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
    </head>
    <body>
+      <% if @signup %>
+        <script>
+          fbq('track', 'CompleteRegistration', {
+            value: 20,
+            currency: 'eur',
+          });
+        </script>
+      <% end %>
       <!-- Google Tag Manager (noscript) -->
       <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TXSFTM9"
          height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>

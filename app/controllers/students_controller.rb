@@ -14,7 +14,7 @@ class StudentsController < ApplicationController
     else
       flash[:alert] = "Something went wrong! Please contact us at info@wrightpianoschool.com"
     end
-    redirect_to root_path
+    redirect_to root_path(signup: "true")
   end
 
   def destroy
