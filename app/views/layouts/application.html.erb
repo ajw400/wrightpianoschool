@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
    <head>
+
       <!-- Google Tag Manager -->
       <% if Rails.env.production? %>
       <script>
@@ -14,9 +15,19 @@
       j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','GTM-TXSFTM9');
+
+
+      function trackPageView() {
+        fbq('init', 'PIXEL_ID')
+        fbq('track', 'PageView')
+      }
+
+      document.addEventListener('turbolinks:load', trackPageView, true)
       </script>
       <% end %>
       <!-- End Google Tag Manager -->
+
+
 
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
