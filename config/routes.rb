@@ -2,7 +2,6 @@ Rails.application.routes.draw do
 
   devise_for :users
   root to: 'pages#home'
-  get 'googled9114c126f84b48f', to: 'pages#googled9114c126f84b48f'
   mount Attachinary::Engine => "/attachinary"
   resources :teachers
   resources :messages, only: [:create]
