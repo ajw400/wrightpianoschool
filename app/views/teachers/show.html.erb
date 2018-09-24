@@ -34,6 +34,9 @@
                   <% @teacher.paragraphs.each do |paragraph| %>
                   <p><%= paragraph.content %></p>
                   <% end %>
+                  <% if @teacher.id == 1 %>
+                    <a href="http://www.andrewwright.nl">Website Andrew Wright</a>
+                  <% end %>
                   <% if current_user %>
                   <% if current_user.email == @teacher.email %>
                   <%= link_to "Edit Teacher Information", edit_teacher_path(@teacher), class: "btn btn-danger btn-lg" %>
