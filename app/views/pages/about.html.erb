@@ -5,31 +5,39 @@
       <div class="container">
          <div class="row justify-content-center text-center section-intro">
             <div class="col-12 col-md-9 col-lg-8">
-               <h1>About Wright Piano School</h1>
+               <h1><%= t(".header1") %></h1>
 
-               <p><%= t(".paragraph1") %></p>
                <p>
-                  Students of Andrew Wright have gone on to be accepted to the most important conservatoires of the Netherlands (Amsterdam, Utrecht, the Hague) and have been successful in national and international competitions such as the Prinses Christina Concours, the Concertgebouw Concours and the Holland International Piano Competition. In November 2015, Nathan Schaumann (15-year-old student of Andrew Wright) won first prize in his age category in the Young Pianist Foundation Competition, the most important piano competition in Holland.
+                 <%= t(".paragraph1") %>
                </p>
                <p>
-                  The Wright Piano School places emphasis on inspiration, hard work and achievement. Some students are on their way to becoming professional musicians, while others simply play for fun. The teachers find ways to help all students advance through regular practice. Luckily, the many performances opportunities offered to students provide great motivation, as students are always practicing toward a performance. The sense of accomplishment from each recital, masterclass or exam performance keeps them working hard! All of the associate teachers at the Wright Piano School are highly qualified with a degree in piano and an affinity for teaching. Besides Andrew Wright, who holds a PhD from Leiden University, Sofia Skopou and Stefan Petrovic are also currently finishing PhD degrees in piano, a level of qualification not found among faculty in any other music schools in the Netherlands. The other associates all have degrees appropriate to their specialization within the school. Please check out the <%= link_to "teachers page", teachers_path %> for more information.
-               </p>
-               <h1 class="mt-5">Business Information</h1>
-               <p>
-                  Address: Pasteurstraat 340, 2522RX Den Haag
+                  <%= t(".paragraph2") %>
                </p>
                <p>
-                  Phone: +31639591941
+                  <%= t(".paragraph3_1") %>
+                  <%= link_to "teachers page", teachers_path %>
+                  <%= t(".paragraph3_2") %>
+               </p>
+               <h1 class="mt-5"><%= t(".header2") %></h1>
+               <p>
+                  <%= t(".paragraph4") %>
+
                </p>
                <p>
-                  KvK: 37157300 Andrew Wright
+                  <%= t(".paragraph5") %>
+
                </p>
                <p>
-                  BTW: NL500119338B01
+                  <%= t(".paragraph6") %>
+
                </p>
-               <h1 class="mt-5">Legal Structure</h1>
                <p>
-                  Wright Piano School is registered with the Kamer van Koophandel as an "eenmanszaak" under the name Andrew Wright. As such, the Wright Piano School refers students to its carefully-selected teachers, who work as independent freelancers. These teachers are legally responsible for their own actions. Wright Piano School performs all administrative functions with the students, including placement, billing, collection, organisation of activities, and periodic assessment.
+                  <%= t(".paragraph7") %>
+
+               </p>
+               <h1 class="mt-5"><%= t(".header3") %></h1>
+               <p>
+                  <%= t(".paragraph8") %>
                </p>
             </div>
             <!--end of col-->
