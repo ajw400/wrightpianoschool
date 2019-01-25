@@ -31,6 +31,94 @@
 
 nl:
   language: "Nederlands"
+  shared:
+      navbar:
+        nav-item1: "About"
+        nav-item2: "Policy and Prices"
+        nav-item3: "Calendar"
+        nav-item4: "Teachers"
+        nav-item5: "Contact"
+        nav-item6: "Videos"
+        nav-item7: "Apply Now"
   pages:
+      home:
+        header: "Wright Piano School"
+        paragraph: "Learn from the best! The Hague, Rotterdam, Utrecht, Leiden, Amsterdam"
+        button: "Apply Now"
       about:
-        paragraph1: "Andrew Wright DUTCH the Wright Piano School in the Hague in 2009 as a private teaching practice. Due to increasing demand the Wright Piano School has grown to include several other expert teachers and a full calendar of activities, including guest masterclasses, recitals, exams and group classes."
+        header1: "About Wright Piano School"
+        paragraph1: "Andrew Wright began the Wright Piano School in the Hague in 2009 as a private teaching practice. Due to increasing demand the Wright Piano School has grown to include several other expert teachers and a full calendar of activities, including guest masterclasses, recitals, exams and group classes."
+        paragraph2: "Students of Andrew Wright have gone on to be accepted to the most important conservatoires of the Netherlands (Amsterdam, Utrecht, the Hague) and have been successful in national and international competitions such as the Prinses Christina Concours, the Concertgebouw Concours and the Holland International Piano Competition. In November 2015, Nathan Schaumann (15-year-old student of Andrew Wright) won first prize in his age category in the Young Pianist Foundation Competition, the most important piano competition in Holland."
+        paragraph3_1: "The Wright Piano School places emphasis on inspiration, hard work and achievement. Some students are on their way to becoming professional musicians, while others simply play for fun. The teachers find ways to help all students advance through regular practice. Luckily, the many performances opportunities offered to students provide great motivation, as students are always practicing toward a performance. The sense of accomplishment from each recital, masterclass or exam performance keeps them working hard! All of the associate teachers at the Wright Piano School are highly qualified with a degree in piano and an affinity for teaching. Besides Andrew Wright, who holds a PhD from Leiden University, Sofia Skopou and Stefan Petrovic are also currently finishing PhD degrees in piano, a level of qualification not found among faculty in any other music schools in the Netherlands. The other associates all have degrees appropriate to their specialization within the school. Please check out the"
+        paragraph3_2: "for more information."
+
+        header2: "Business Information"
+        paragraph4: "Address: Pasteurstraat 340, 2522RX Den Haag"
+        paragraph5: "Phone: +31639591941"
+        paragraph6: "KvK: 37157300 Andrew Wright"
+        paragraph7: "BTW: NL500119338B01"
+
+        header3: "Legal Structure"
+        paragraph8: "Wright Piano School is registered with the Kamer van Koophandel as an \"eenmanszaak\" under the name Andrew Wright. As such, the Wright Piano School refers students to its carefully-selected teachers, who work as independent freelancers. These teachers are legally responsible for their own actions. Wright Piano School performs all administrative functions with the students, including placement, billing, collection, organisation of activities, and periodic assessment."
+      policy:
+        header: "Studio Policy - Piano Lessons"
+        paragraph: "Please examine the studio policy carefully. It includes prices, information about cancellations and make-up lessons, and many other details. Feel free to call us and ask if you have any questions!"
+        link: "Studio Policy 2018 - 2019"
+      calendar:
+        header: "Calendar"
+        paragraph: "Please note that the calendar below is a standard calendar for the school. Individual teachers might deviate from the calendar, and will communicate this directly to their students, while still offering the correct number of teaching weeks. Refer to the Studio Policy for information about cancellations / rescheduling lessons."
+        link: "Wright Piano School Calendar - 2018-2019"
+      contact:
+        header1: "Contact"
+        header2: "Locations/regions:"
+      videos:
+        header: "Videos of our Students"
+        paragraph1: "Nathan plays Liszt Concerto in E-flat with Noord Nederlands Orkest"
+        paragraph2: "Two students playing their own Coldplay mashup!"
+        paragraph3: "Nathan plays a Chopin-Godowsky Etude for Left Hand alone in Hamburg"
+        paragraph4: "Annie Li (7) plays at the Nieuwe Kerk (Den Haag)"
+  teachers:
+      index:
+        header: "Piano Teachers"
+        paragraph: "Please click on a teacher to display their full information!"
+      show:
+        button1: "Sign up for a free trial lesson!"
+        button2: "Contact"
+        paragraph1: "Languages:"
+        paragraph2: "Location/region:"
+        header1: "Biography"
+        link1: "Website Andrew Wright"
+        link2: "Research abstract"
+        link3: "PhD Dissertation"
+        link4: "Edit Teacher Information"
+        modal-header1_1: "Send"
+        modal-header1_2: "a message!"
+        modal-paragraph1: "Please also feel free to call us at 0639591941"
+        modal-placeholder1: "Your name"
+        modal-placeholder2: "Your email address"
+        modal-placeholder3: "Your phone number (optional)"
+        modal-placeholder4: "Message"
+        modal-button: "Send Message"
+  students:
+      student_form:
+        paragraph1: "Fill in this application for a free trial lesson!"
+        placeholder1: "Parent First Name"
+        placeholder2: "Parent Last Name"
+        placeholder3: "Phone Number"
+        placeholder4: "Email"
+        placeholder5: "Address"
+        placeholder6: "Zip code"
+        placeholder7: "Preferred language of instruction (English, Dutch, German etc.)"
+        placeholder8: "Please indicate whether you would like lessons at your home, or at the teacher's location"
+        placeholder9: "Times available (list as many as possible)"
+        link1: "Add Child"
+        placeholder10: "Notes"
+        label1: "How did you hear about us?"
+
+        collection1: "Google search"
+        collection2: "Word-of-mouth referral"
+        collection3: "Poster / flyer"
+        collection4: "Competition, masterclass, or other activity"
+        collection5: "Other"
+
+        button1: "Send Application"

@@ -13,11 +13,11 @@
               <% end %>
               <div class="row text-center">
                 <div class="col-sm-12">
-                  <span class="btn btn-lg btn-link text-dark border">Sign up for a free trial lesson!</span></div>
+                  <span class="btn btn-lg btn-link text-dark border"><%= t(".button1") %></span></div>
                 </div>
                 <br>
                 <div class="col-sm-12">
-                  <button type="button" class="btn btn-lg btn-success" data-toggle="modal" data-target="#contact">Contact</button>
+                  <button type="button" class="btn btn-lg btn-success" data-toggle="modal" data-target="#contact"><%= t(".button2") %></button>
                 </div>
               </div>
               <br>
@@ -26,22 +26,24 @@
                 <li><%= "#{degree.description} - #{degree.school}, #{degree.year} - #{degree.notes}" %></li>
                 <% end %>
               </ul>
-              <p>Languages:
+              <p><%= t(".paragraph1") %>
                 <%= @teacher.languages %></p>
-                <p>Location/region:
+                <p><%= t(".paragraph2") %>
                   <%= @teacher.location %></p>
-                  <h3>Biography</h3>
+                  <h3><%= t(".header1") %></h3>
                   <% @teacher.paragraphs.each do |paragraph| %>
                   <p><%= paragraph.content %></p>
                   <% end %>
                   <% if @teacher.id == 1 %>
-                    <a href="http://www.andrewwright.nl">Website Andrew Wright </a> |
-                    <a href="http://www.andrewwright.nl/pages/polyphonic_touch_long_abstract"> Research abstract </a> |
-                    <a href="https://openaccess.leidenuniv.nl/handle/1887/41220"> PhD Dissertation</a>
+                    <a href="http://www.andrewwright.nl"><%= t(".link1") %> </a> |
+                    <a href="http://www.andrewwright.nl/pages/polyphonic_touch_long_abstract"> <%= t(".link2") %> </a> |
+                    <a href="https://openaccess.leidenuniv.nl/handle/1887/41220"> <%= t(".link3") %></a>
                   <% end %>
                   <% if current_user %>
                   <% if current_user.email == @teacher.email %>
-                  <%= link_to "Edit Teacher Information", edit_teacher_path(@teacher), class: "btn btn-danger btn-lg" %>
+                  <%= link_to edit_teacher_path(@teacher), class: "btn btn-danger btn-lg" do %>
+                    <%= t(".link4") %>
+                  <% end %>
                   <% end %>
                   <% end %>
 
@@ -52,21 +54,22 @@
                       <div class="modal-content">
                         <div class="modal-header">
                           <button type="button" class="close" data-dismiss="modal">&times;</button>
-                          <h4 class="modal-title">Send
+                          <h4 class="modal-title"><%= t(".modal-header1_1") %>
                             <%= @teacher.first_name %>
-                          a message!</h4>
+                          <%= t(".modal-header1_2") %></h4>
                         </div>
                         <div class="modal-body">
-                          <p>Please also feel free to call us at 0639591941</p>
+                          <p><%= t(".modal-paragraph1") %></p>
                           <%= simple_form_for @message do |f| %>
-                          <%= f.input :name, required: true, placeholder: "Your name", label: false%>
-                          <%= f.input :email, required: true, placeholder: "Your email address", label: false %>
-                          <%= f.input :phone, placeholder: "Your phone number (optional)", label: false %>
-                          <%= f.input :content, required: true, label: "Message", input_html: { rows: 7 }%>
+                          <%= f.input :name, required: true, placeholder: t(".modal-placeholder1"), label: false %>
+                          <%= f.input :email, required: true, placeholder: t(".modal-placeholder2"), label: false %>
+                          <%= f.input :phone, placeholder: t(".modal-placeholder3"), label: false %>
+                          <%= f.input :content, required: true, placeholder: t(".modal-placeholder4"), input_html: { rows: 7 } %>
                           <%= f.hidden_field :teacher_id, value: @teacher.id %>
                         </div>
                         <div class="modal-footer">
-                          <%= button_tag(type: 'submit', class: "btn btn-primary") do %>Send Message
+                          <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
+                            <%= t(".modal-button") %>
                           <% end %>
                           <% end %>
                         </div>
