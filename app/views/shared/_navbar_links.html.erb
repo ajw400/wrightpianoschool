@@ -1,0 +1,37 @@
+            <div class="collapse navbar-collapse justify-content-between" id="navbarNav">
+               <ul class="navbar-nav">
+                  <li class="nav-item">
+                     <%= link_to t(".nav-item1"), about_pages_path, class: "nav-link" %>
+                  </li>
+                  <li class="nav-item">
+                     <%= link_to t(".nav-item2"), policy_pages_path, class: "nav-link" %>
+                  </li>
+                  <li class="nav-item">
+                     <%= link_to t(".nav-item3"), calendar_pages_path, class: "nav-link" %>
+                  </li>
+                  <li class="nav-item">
+                     <%= link_to t(".nav-item4"), teachers_path, class: "nav-link" %>
+                  </li>
+                  <li class="nav-item">
+                     <%= link_to t(".nav-item5"), contact_pages_path, class: "nav-link" %>
+                  </li>
+                  <li class="nav-item">
+                     <%= link_to t(".nav-item6"), videos_pages_path, class: "nav-link" %>
+                  </li>
+               </ul>
+                <% if locale == :en %>
+                  <%= link_to locale: :nl do %>
+                    <%= image_tag 'Netherlands.png', width: 25 %>
+                  <% end %>
+                <% else %>
+                  <%= link_to locale: :en do %>
+                    <%= image_tag 'UK.png', width: 25 %>
+                  <% end %>
+                <% end %>
+
+               <ul class="navbar-nav">
+                  <li class="nav-item">
+                     <%= link_to t(".nav-item7"), new_student_path, class: "btn btn-outline-primary" %>
+                  </li>
+               </ul>
+            </div>

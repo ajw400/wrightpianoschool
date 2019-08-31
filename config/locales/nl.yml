@@ -32,7 +32,7 @@
 nl:
   language: "Nederlands"
   shared:
-      navbar:
+      navbar_links:
         nav-item1: "Over ons"
         nav-item2: "Voorwaarden"
         nav-item3: "Agenda"
