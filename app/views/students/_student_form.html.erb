@@ -66,6 +66,9 @@
                   <%= f.input :referral, label: t(".label1"), collection: [t(".collection1"), t(".collection2"), t(".collection3"), t(".collection4"), t(".collection5")] %>
                </div>
                <div class="col-12">
+                    <%= recaptcha_tags %>
+               </div>
+               <div class="col-12">
                   <%= f.button :submit, t(".button1"), class: "btn btn-success" %>
                </div>
             </div>
