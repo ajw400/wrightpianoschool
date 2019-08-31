@@ -39,7 +39,7 @@ en:
         nav-item4: "Teachers"
         nav-item5: "Contact"
         nav-item6: "Videos"
-        nav-item7: "Apply Now"
+        nav-item7: "Register for Trial Lesson"
   pages:
       home:
         header: "Wright Piano School"
@@ -63,11 +63,11 @@ en:
       policy:
         header: "Studio Policy - Piano Lessons"
         paragraph: "Please examine the studio policy carefully. It includes prices, information about cancellations and make-up lessons, and many other details. Feel free to call us and ask if you have any questions!"
-        link: "Studio Policy 2018 - 2019"
+        link: "Studio Policy 2019 - 2020"
       calendar:
         header: "Calendar"
         paragraph: "Please note that the calendar below is a standard calendar for the school. Individual teachers might deviate from the calendar, and will communicate this directly to their students, while still offering the correct number of teaching weeks. Refer to the Studio Policy for information about cancellations / rescheduling lessons."
-        link: "Wright Piano School Calendar - 2018-2019"
+        link: "Wright Piano School Calendar - 2019-2020"
       contact:
         header1: "Contact"
         header2: "Locations/regions:"

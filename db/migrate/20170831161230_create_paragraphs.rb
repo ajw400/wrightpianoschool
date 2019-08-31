@@ -1,4 +1,4 @@
-class CreateParagraphs < ActiveRecord::Migration
+class CreateParagraphs < ActiveRecord::Migration[5.0]
   def change
     create_table :paragraphs do |t|
       t.text :content
