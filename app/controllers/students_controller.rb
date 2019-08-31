@@ -6,10 +6,9 @@ class StudentsController < ApplicationController
   end
 
   def create
-    @student = Student.create(student_params)
-    if @student
+    @student = Student.new(student_params)
+    if verify_recaptcha(model: @student) && @student.save
       flash[:notice] = "Application submitted!"
-      p @student
       StudentMailer.welcome(@student).deliver_now
     else
       flash[:alert] = "Something went wrong! Please contact us at info@wrightpianoschool.com"
