@@ -62,20 +62,20 @@ nl:
         paragraph8: "Wright Piano School is geregistreerd met de Kamer van Koophandel onder naam Andrew Wright. Docenten zijn freelance en verantwoordelijk voor zijn eigen lespraktijken. Alle administratieve verplichtingen zoals factureren worden gedaan door Wright Piano School."
       policy:
         header: "Prijzen en Voorwaarden - Piano Lessen"
-        paragraph: "De document met voorwaarden bevat informatie over prijzen, en andere belangrijke voorwaarden. Graag contact met ons opnemen met vragen of bijzondere situaties."
+        paragraph: "Het document met voorwaarden bevat informatie over prijzen en andere belangrijke voorwaarden. Voor verdere vragen of bijzonder situaties neem contact met ons op."
         link: "Prijzen en Voorwarden 2019 - 2020"
       calendar:
         header: "Agenda en Vakanties"
-        paragraph: "Ons agenda geeft aan de lesweken voor de school jaar. Lees ons voorwaarden voor meer informatie over annulering en inhalen van lessen."
+        paragraph: "Onze agenda geeft aan wat de lesweken zijn gedurende het jaar. Lees onze voorwaarden voor meer informatie over annulering en inhalen van lessen."
         link: "Wright Piano School Agenda en Vakanties - 2019-2020"
       contact:
         header1: "Contact"
         header2: "Locaties/regio's:"
       videos:
         header: "Filmpjes van onze leerlingen"
-        paragraph1: "Nathan speelt Liszt Concerto Nr. 1 met Noord Nederlands Orkest"
-        paragraph2: "Twee leerlingen spelen zijn eigen geimproviseerd Coldplay mashup!"
-        paragraph3: "Nathan speelt Chopin-Godowsky Etude voor linker hand alleen in Hamburg"
+        paragraph1: "Nathan speelt Liszt Piano Concerto Nr. 1 met Noord Nederlands Orkest"
+        paragraph2: "Twee leerlingen spelen hun eigen geimproviseerde Coldplay mashup!"
+        paragraph3: "Nathan speelt Chopin-Godowsky Etude voor de linker hand alleen in Hamburg"
         paragraph4: "Annie Li (7) speelt in de Nieuwe Kerk (Den Haag)"
   teachers:
       index:
@@ -101,24 +101,24 @@ nl:
         modal-button: "Stuur bericht"
   students:
       student_form:
-        paragraph1: "Registreer hier voor een gratis en vrijblijvend proefles!"
+        paragraph1: "Registreer hier voor een gratis en vrijblijvende proefles!"
         placeholder1: "Voornaam (ouder)"
         placeholder2: "Achternaam (ouder)"
         placeholder3: "Telefoonnummer"
         placeholder4: "Email"
         placeholder5: "Adres"
         placeholder6: "Postcode"
-        placeholder7: "Gewenst talen voor onderwijs (Engels, Nederlands, Duits etc.)"
-        placeholder8: "Wilt u lessen aan huis, of aan locatie van de docent?"
-        placeholder9: "Beschikbaar dagen/tijden (geef zoveel mogelijk)"
-        link1: "Kind toevoegen"
+        placeholder7: "Gewenste taal voor het onderwijs (Engels, Nederlands, Duits etc.)"
+        placeholder8: "Wilt u lessen aan huis, of bij de docent?"
+        placeholder9: "Beschikbare dagen/tijden (geef zoveel mogelijk opties)"
+        link1: "Gegevens kind"
         placeholder10: "Notities"
         label1: "Hoe heeft u ons gevonden?"
 
         collection1: "Google search"
-        collection2: "Van een van ons leerlingen"
+        collection2: "Via een van onze leerlingen"
         collection3: "Poster / flyer"
         collection4: "Concours, masterclass, of andere activiteit"
-        collection5: "Other"
+        collection5: "Andere"
 
         button1: "Formulier sturen"
