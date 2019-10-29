@@ -75,7 +75,7 @@ nl:
         header: "Filmpjes van onze leerlingen"
         paragraph1: "Nathan speelt Liszt Piano Concerto Nr. 1 met het Noord Nederlands Orkest"
         paragraph2: "Twee leerlingen spelen hun eigen geimproviseerde Coldplay mashup!"
-        paragraph3: "Nathan speelt Chopin-Godowsky Etude voor de linker hand alleen in Hamburg"
+        paragraph3: "Nathan speelt een Chopin-Godowsky Etude voor de linker hand alleen in Hamburg"
         paragraph4: "Annie Li (7) speelt in de Nieuwe Kerk (Den Haag)"
   teachers:
       index:
@@ -115,10 +115,10 @@ nl:
         placeholder10: "Notities"
         label1: "Hoe heeft u ons gevonden?"
 
-        collection1: "Google search"
+        collection1: "Google"
         collection2: "Via een van onze leerlingen"
         collection3: "Poster / flyer"
         collection4: "Concours, masterclass, of andere activiteit"
-        collection5: "Andere"
+        collection5: "Anders"
 
         button1: "Formulier sturen"
