@@ -4,7 +4,6 @@ class TeachersController < ApplicationController
   def index
     # @teachers = Teacher.order(:rank)
     @teachers = Teacher.where(id: 1)
-    p @teachers
   end
 
   def new
