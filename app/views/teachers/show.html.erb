@@ -47,36 +47,6 @@
                   <% end %>
                   <% end %>
 
-                <!--   <div id="contact" class="modal fade" role="dialog">
-                    <div class="modal-dialog">
-
-                      <!-- Modal content-->
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <button type="button" class="close" data-dismiss="modal">&times;</button>
-                          <h4 class="modal-title"><%= t(".modal-header1_1") %>
-                            <%= @teacher.first_name %>
-                          <%= t(".modal-header1_2") %></h4>
-                        </div>
-                        <div class="modal-body">
-                          <p><%= t(".modal-paragraph1") %></p>
-                          <%= simple_form_for @message do |f| %>
-                          <%= f.input :name, required: true, placeholder: t(".modal-placeholder1"), label: false %>
-                          <%= f.input :email, required: true, placeholder: t(".modal-placeholder2"), label: false %>
-                          <%= f.input :phone, placeholder: t(".modal-placeholder3"), label: false %>
-                          <%= f.input :content, required: true, placeholder: t(".modal-placeholder4"), input_html: { rows: 7 } %>
-                          <%= f.hidden_field :teacher_id, value: @teacher.id %>
-                        </div>
-                        <div class="modal-footer">
-                          <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
-                            <%= t(".modal-button") %>
-                          <% end %>
-                          <% end %>
-                        </div>
-                      </div>
-
-                    </div>
-                  </div> -->
                 </div>
               </div>
             </div>
