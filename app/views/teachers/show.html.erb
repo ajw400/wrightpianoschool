@@ -7,11 +7,10 @@
         <div class="col-12 col-md-9 col-lg-8">
           <div class="text-center">
             <h1><%= "#{@teacher.first_name} #{@teacher.last_name}" %></h1>
-<!--             <% if @teacher.photo? %>
+            <% if @teacher.photo? && 1==2%>
             <div class="teacher-pic">
               <%= cl_image_tag @teacher.photo.path, width: 250, height: 350, crop: :fill, gravity: :face, class: "img-fluid rounded mb-3" %></div>
-              <% end %> -->
-              <%= image_tag "andrew-face.png", class "img-fluid rounded mb-3"%>
+              <% end %>
               <div class="row text-center">
                 <div class="col-sm-12">
                   <span class="btn btn-lg btn-link text-dark border"><%= t(".button1") %></span></div>

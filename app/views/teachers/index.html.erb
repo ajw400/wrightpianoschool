@@ -17,7 +17,7 @@
             <% @teachers.each do |teacher| %>
             <%= link_to teacher_path(teacher) do %>
             <div class="card">
-               <% if teacher.photo? %>
+               <% if teacher.photo? && 1==2%>
                 <%= cl_image_tag teacher.photo.path, height: 297, width: 297, crop: :fill, gravity: :face, class: "img-fluid rounded card-img" %>
 
                <% else %>
