@@ -7,7 +7,7 @@ class StudentsController < ApplicationController
 
   def create
     @student = Student.new(student_params)
-    if verify_recaptcha(model: @student) && @student.save
+    if verify_recaptcha(model: @student) && @student.save && (@student.first_name != @student.last_name)
       flash[:notice] = "Application submitted!"
       StudentMailer.welcome(@student).deliver_now
     else
